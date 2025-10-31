@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    .escondido { display: none; }
+    .mostrar { display: block; color: red; }
+  </style>
+  <link rel="stylesheet" href="./registro.css">
+</head>
+
+<body translate="no">
+  <div class="contenedor-registro">
+    <form class="formulario-registro">
+      <p class="titulo-registro">Registro</p>
+
+      <input type="text" placeholder="Nombre" id="nombre" required>
+      <input type="text" placeholder="Apellidos" id="apellidos" required>
+      <input type="email" placeholder="Correo electrónico" id="correo" required>
+      <input type="text" placeholder="Usuario" id="usuario" required>
+      <input type="password" placeholder="Contraseña" id="contrasena" required>
+
+      <p id="mensaje-error" class="escondido">Por favor, completa todos los campos.</p>
+
+      <button id="registrarse" type="button" class="boton-registrarse" onclick="validarRegistro()">
+        <i class="spinner"></i>
+        <span class="state">Registrarse</span>
+      </button>
+
+      <a href="login.html">¿Ya tienes una cuenta? Inicia sesión</a>
+    </form>
+  </div>
+
+  <script>
+    function validarRegistro() {
+      const campos = ["nombre", "apellidos", "correo", "usuario", "contrasena"];
+      let valido = true;
+
+      campos.forEach(campo => {
+        if (!document.getElementById(campo).value.trim()) {
+          valido = false;
+        }
+      });
+
+      const mensaje = document.getElementById("mensaje-error");
+      mensaje.className = valido ? "escondido" : "mostrar";
+
+      if (valido) alert("Registro completado correctamente ✅");
+    }
+  </script>
+</body>
+</html>
