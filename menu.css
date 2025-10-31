@@ -1,7 +1,39 @@
+/* BODY - Fondo con overlay */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  
+  /* Imagen de fondo */
+  background: url("https://www.qonecta.com/documents/80345/95274/la-batcueva-convertida-en-garaje6.jpg/91c4e021-0f32-44f9-824c-88196c51b646?t=1470926109000") no-repeat center center fixed;
+  background-size: cover;
+
+  /* Overlay para mejorar legibilidad */
+  position: relative;
+  color: white;
+}
+
+/* Overlay oscuro */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* oscuro semi-transparente */
+  z-index: -1; /* detrás de todo */
+}
+
+/* HEADER y MENÚ */
 header {
-  background-color: #0a1a2f;
+  background-color: rgba(10, 26, 47, 0.8); /* semi-transparente para ver el fondo */
   color: white;
   padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* que quede encima del overlay */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
 nav {
@@ -11,10 +43,11 @@ nav {
 }
 
 nav .logo {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
+/* LISTA DEL MENÚ */
 #menuLinks {
   list-style: none;
   display: flex;
@@ -26,12 +59,14 @@ nav .logo {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
 #menuLinks li a:hover {
   color: #ffd700;
 }
 
+/* BOTÓN HAMBURGUESA */
 .menu-toggle {
   display: none;
   background: none;
@@ -41,14 +76,22 @@ nav .logo {
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: background 0.3s, color 0.3s;
 }
 
+.menu-toggle:hover {
+  background: white;
+  color: #0a1a2f;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
   #menuLinks {
     display: none;
     flex-direction: column;
-    background-color: #0a1a2f;
+    background-color: rgba(10, 26, 47, 0.9); /* fondo semi-transparente */
     width: 100%;
+    padding: 1rem 0;
   }
 
   #menuLinks.show {
@@ -58,4 +101,10 @@ nav .logo {
   .menu-toggle {
     display: block;
   }
+}
+
+/* OPCIONAL: Contenido centrado */
+main {
+  padding: 2rem;
+  text-align: center;
 }
