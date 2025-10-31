@@ -1,7 +1,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   height: 100vh;
-  background: url("https://www.educa2.madrid.org/web/educamadrid/principal/files/e9437084-f22b-4acd-9e05-5eb63bd57f40/web/Images/Inicio/El%20Centro.jpg") 50% fixed;
+  background: url("https://hips.hearstapps.com/hmg-prod/images/si202407110285-6690fe8721fc2.jpg?crop=1.00xw:0.846xh;0,0.116xh") 50% fixed;
   background-size: cover;
 }
 
@@ -25,7 +25,7 @@ body {
   width: 100%;
   min-height: 100%;
   padding: 20px;
-  background: rgba(4, 40, 68, 0.85);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .login {
@@ -79,7 +79,7 @@ body {
 .login input:focus {
   outline: none;
   color: #444;
-  border-color: #2196F3;
+  border-color: #013d6e;
   border-left-width: 35px;
 }
 .login input:focus + i.fa {
@@ -89,7 +89,7 @@ body {
 }
 .login a {
   font-size: 0.8em;
-  color: #2196F3;
+  color: #013d6e;
   text-decoration: none;
 }
 .login .title {
@@ -104,7 +104,7 @@ body {
   width: 100%;
   height: 100%;
   padding: 10px 10px;
-  background: #2196F3;
+  background: #013d6e;
   color: #fff;
   display: block;
   border: none;
