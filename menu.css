@@ -25,73 +25,106 @@ body::before {
   z-index: -1; /* detrás de todo */
 }
 
-/* HEADER y MENÚ */
+/* ====== HEADER ====== */
 header {
-  background-color: rgba(10, 26, 47, 0.8); /* semi-transparente para ver el fondo */
-  color: white;
-  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, #001f3f, #003366, #0055aa);
   position: sticky;
   top: 0;
-  z-index: 100; /* que quede encima del overlay */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-nav {
+/* ====== CONTENEDOR HEADER ====== */
+.header-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.2rem 3rem;
+  gap: 4rem;
 }
 
-nav .logo {
+/* ====== LOGO ====== */
+.logo {
+  margin: 0;
   font-size: 1.5rem;
   font-weight: bold;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  white-space: nowrap;
 }
 
-/* LISTA DEL MENÚ */
+/* ====== NAVEGACIÓN ====== */
+
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
 #menuLinks {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  margin: 0;
+  gap: 2rem;
+  margin: 0px;
+  padding: 10px;
 }
 
 #menuLinks li a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 #menuLinks li a:hover {
-  color: #ffd700;
+  background-color: #ffd700;
+  color: #002b5c;
+  box-shadow: 0 0 10px #ffd700;
 }
 
-/* BOTÓN HAMBURGUESA */
+/* ====== BOTÓN HAMBURGUESA ====== */
 .menu-toggle {
   display: none;
   background: none;
   border: 2px solid white;
   border-radius: 8px;
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 0.8rem;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition:  color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .menu-toggle:hover {
-  background: white;
-  color: #0a1a2f;
+  background-color: #ffd700;
+  color: #001f3f;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   #menuLinks {
     display: none;
     flex-direction: column;
-    background-color: rgba(10, 26, 47, 0.9); /* fondo semi-transparente */
+    background-color: rgba(0, 31, 63, 0.95);
     width: 100%;
+    margin-top: 1rem;
     padding: 1rem 0;
+    border-top: 2px solid #ffd700;
   }
 
   #menuLinks.show {
@@ -100,6 +133,12 @@ nav .logo {
 
   .menu-toggle {
     display: block;
+    align-self: flex-end;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
   }
 }
 
