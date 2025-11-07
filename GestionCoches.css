@@ -1,6 +1,9 @@
-div {
-    
+.contenedor-principal{
   border: 1px solid black;
   width: 20%;
   justify-content: center;
+}
+#otraOficina{
+  width: 100px;
+  height: 100px;
 }
