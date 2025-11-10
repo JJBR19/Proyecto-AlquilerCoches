@@ -1,5 +1,22 @@
+function checkVehicleType(selectElement) {
+  if (selectElement.value === "todos") {
+    openDialog();
+  }
+}
+
 function openDialog() {
-let dialog = document.getElementById('vehicleDialog');
-//.showModal() es el método nativo para abrir el <dialog> de forma modal
-dialog.showModal();
+  const dialog = document.getElementById("vehicleDialog");
+  dialog.showModal();
+}
+
+function closeDialog() {
+  const dialog = document.getElementById("vehicleDialog");
+  dialog.close();
+}
+
+function selectAll(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(cb => cb.checked = true);
 }
