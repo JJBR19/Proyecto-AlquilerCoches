@@ -1,71 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú - Alquiler de Coches</title>
   <link rel="stylesheet" href="menu.css">
 </head>
+
 <body>
 
-<header>
-  <div class="header-container">
-    <div class="logo">🚗 Alquiler de Coches</div>
-    <nav id="menu">
-      <ul id="menuLinks">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="gestion_coches.html">Gestión Coches</a></li>
-        <li><a href="gestion_clientes.html">Clientes</a></li>
-        <li><a href="alquiler_form.html">Alquileres</a></li>
-        <li id="loginLink"><a href="login.html">Login</a></li>
-        <li id="registerLink"><a href="register.html">Registro</a></li>
-        <li id="logoutLink" style="display:none"><a href="#">Cerrar sesión</a></li>
-      </ul>
-      <button id="btnMenu" class="menu-toggle">☰</button>
-    </nav>
-  </div>
-</header>
+  <header>
+    <div class="header-container">
+      <div class="logo">🚗 Alquiler de Coches</div>
+      <nav id="menu">
+        <ul id="menuLinks">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="gestion_coches.html">Alquiler Coches</a></li>
+          <li id="logoutLink" style="display:none"><a href="#">Cerrar sesión</a></li>
+        </ul>
+        <button id="btnMenu" class="menu-toggle">☰</button>
+      </nav>
+      <div class="auth-links">
+        <div class="auth-logo"><img src="https://marketplace.canva.com/A5alg/MAESXCA5alg/1/tl/canva-user-icon-MAESXCA5alg.png" alt="logoLogin"></div>
+        <ul>
+          <li id="loginLink"><a href="login.html">Login</a></li>
+          <li id="registerLink"><a href="register.html">Registro</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
   <main>
-    <h1>Bienvenido al sistema de alquiler de coches</h1>
-    <p>Este es el contenido de ejemplo debajo del menú.</p>
+    <section class="bienvenida">
+      <h1>Bienvenido a Alquiler de Coches 🚗</h1>
+      <p>
+        Somos una empresa dedicada al alquiler de vehículos con más de 10 años de experiencia.
+        Ofrecemos una amplia gama de coches para todo tipo de viajes — desde compactos hasta deportivos de lujo.
+      </p>
+      <a href="catalogo.html" class="btn-primary">Explorar coches</a>
+    </section>
+
+
+    <!-- SECCIÓN DE COCHES -->
+    <section class="coches">
+      <h2>NUESTROS COCHES MAS DESTACADOS</h2>
+      <div class="coches-container">
+        <div class="card">
+          <img src="https://scene7.toyota.eu/is/image/toyotaeurope/review-nuevo-corolla?wid=1920&hei=1080&fit=hfit,1"
+            alt="Coche 1">
+          <h3>Toyota Corolla</h3>
+          <p>Perfecto para ciudad y viajes cortos. Económico y confiable.</p>
+          <a href="#" class="btn-secondary">Alquilar</a>
+        </div>
+        <div class="card">
+          <img class="coche2"
+            src="https://s3-eu-west-1.amazonaws.com/carnovo-images/review-models/a7b77783-cd34-4a04-9c82-16b5a81c8696.jpg"
+            alt="Coche 2">
+          <h3>Mercedes Clase C</h3>
+          <p>Lujo y confort para una experiencia premium en carretera.</p>
+          <a href="#" class="btn-secondary">Alquilar</a>
+        </div>
+        <div class="card">
+          <img src="https://images.coches.com/_vn_/bmw/Serie-3/1f1b2ba8731617c04decf13215d20e83.jpg?w=1920&ar=16:9"
+            alt="Coche 3">
+          <h3>BMW Serie 3</h3>
+          <p>Deportivo y cómodo para viajes largos con estilo y seguridad.</p>
+          <a href="#" class="btn-secondary">Alquilar</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section class="servicios">
+      <h2>Servicios que ofrecemos</h2>
+      <div class="servicios-container">
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="">
+          <h3>Entrega a domicilio</h3>
+          <p>Recibe tu coche sin moverte de casa.</p>
+        </div>
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="">
+          <h3>Seguro incluido</h3>
+          <p>Conducción segura en todos nuestros coches.</p>
+        </div>
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="">
+          <h3>Asistencia 24h</h3>
+          <p>Estamos disponibles para ayudarte en cualquier momento.</p>
+        </div>
+      </div>
+    </section>
+
   </main>
-
-   <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Alquila tu coche ideal</h1>
-      <p>Encuentra el coche perfecto para cada ocasión con nuestro servicio rápido y seguro</p>
-      <a href="catalogo.html" class="btn-primary">Ver catálogo</a>
-    </div>
-  </section>
-
-  <!-- SECCIÓN DE COCHES -->
-  <section class="coches">
-    <h2>Nuestros Coches</h2>
-    <div class="coches-container">
-      <div class="card">
-        <img src="https://cdn.pixabay.com/photo/2016/04/01/11/10/car-1299867_960_720.jpg" alt="Coche 1">
-        <h3>Toyota Corolla</h3>
-        <p>Perfecto para ciudad y viajes cortos. Económico y confiable.</p>
-        <a href="#" class="btn-secondary">Alquilar</a>
-      </div>
-      <div class="card">
-        <img src="https://cdn.pixabay.com/photo/2013/07/12/15/19/auto-150408_960_720.png" alt="Coche 2">
-        <h3>BMW Serie 3</h3>
-        <p>Deportivo y cómodo para viajes largos con estilo y seguridad.</p>
-        <a href="#" class="btn-secondary">Alquilar</a>
-      </div>
-      <div class="card">
-        <img src="https://cdn.pixabay.com/photo/2014/04/03/11/50/car-311080_960_720.png" alt="Coche 3">
-        <h3>Mercedes Clase C</h3>
-        <p>Lujo y confort para una experiencia premium en carretera.</p>
-        <a href="#" class="btn-secondary">Alquilar</a>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Alquiler de Coches. Todos los derechos reservados.</p>
@@ -73,4 +103,5 @@
 
   <script src="menu.js"></script>
 </body>
+
 </html>

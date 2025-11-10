@@ -46,6 +46,88 @@ header {
   gap: 4rem;
 }
 
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: rgba(255, 215, 0, 0.1); /* Fondo dorado suave */
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  flex-shrink: 0; /* Que no se encoja */
+}
+
+/* Logo a la izquierda del bloque auth */
+.auth-logo {
+  font-size: 1.6rem;
+}
+
+/* Lista horizontal de links */
+.auth-links ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.auth-links ul li a {
+  text-decoration: none;
+  color: #ffd700;
+  font-weight: 700;
+  transition: color 0.3s ease,;
+}
+
+.auth-links ul li a:hover {
+  color: #e6c200;
+  text-decoration: underline;
+}
+.auth-logo img {
+  width: 32px;       /* Tamaño pequeño y estándar para icono */
+  height: 32px;
+  border-radius: 50%; /* Para que sea circular */
+  object-fit: cover;  /* Que la imagen no se distorsione */
+  border: 2px solid #ffd700; /* Borde dorado para destacar */
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.6); /* Sombra dorada suave */
+  cursor: pointer;    /* Indica que es clickeable si quieres */
+  
+}
+
+/* ====== CONTENEDOR MAIN ====== */
+.bienvenida {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: white;
+}
+
+.bienvenida h1 {
+  color: #ffd700;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.bienvenida p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.bienvenida .btn-primary {
+  background-color: #ffd700;
+  color: #002b5c;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.bienvenida .btn-primary:hover {
+  background-color: #e6c200;
+  transform: scale(1.05);
+}
+
+
 /* ====== LOGO ====== */
 .logo {
   margin: 0;
@@ -63,7 +145,7 @@ header {
 #menu {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   flex: 1;
 }
 
@@ -147,61 +229,16 @@ main {
   padding: 2rem;
   text-align: center;
 }
-/* HERO SECTION */
-.hero {
-  background: url('https://www.qonecta.com/documents/80345/95274/la-batcueva-convertida-en-garaje6.jpg/91c4e021-0f32-44f9-824c-88196c51b646?t=1470926109000') no-repeat center center/cover fixed;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 0;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.btn-primary {
-  background-color: #ffd700;
-  color: #0a1a2f;
-  padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #e6c200;
-  transform: scale(1.05);
-}
 
 /* SECCIÓN DE COCHES */
 .coches {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 50px;
   background-color: #0a1a2f;
   text-align: center;
+  border-radius: 10px;
 }
 
 .coches h2 {
@@ -223,6 +260,10 @@ main {
   padding: 1rem;
   width: 300px;
   transition: transform 0.3s;
+
+}
+.coche2{
+ height: 168px;
 }
 
 .card:hover {
@@ -294,3 +335,76 @@ footer {
   }
 }
 
+/* ====== SECCIÓN SERVICIOS ====== */
+.servicios {
+  background-color: #0a1a2f;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 200px;
+  color: white;
+  padding: 2rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.servicios h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.servicios-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.servicio {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  width: 300px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.servicio:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+.servicio img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 5px #ffd700);
+}
+
+.servicio h3 {
+  color: #ffd700;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.servicio p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .servicios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicio {
+    width: 90%;
+  }
+}
