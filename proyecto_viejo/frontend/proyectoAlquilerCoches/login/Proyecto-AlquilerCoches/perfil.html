@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Perfil</title>
+  <link rel="stylesheet" href="./perfil.css">
+</head>
+<body>
+  <script type="module" src="../../menu/componenteMenu.js"></script>
+  <menu-componente></menu-componente>
+  <main class="perfil-page">
+    <section class="perfil-contenedor">
+      <div class="perfil-card">
+        <aside class="perfil-aside">
+          <div class="avatar" id="avatar">A</div>
+          <button id="editarBtn" class="btn btn-primary">Editar perfil</button>
+          <button id="btnCerrar" class="btn btn-logout">Cerrar sesión</button>
+        </aside>
+
+        <div class="perfil-body">
+          <h2 id="perfilNombre">Mi Perfil</h2>
+          <div id="perfilDatos" class="datos-grid">
+            <!-- los datos del usuario se renderizarán aquí -->
+          </div>
+          <div class="actions" id="formActions" style="display:none;">
+            <button id="guardarBtn" class="btn btn-success">Guardar</button>
+            <button id="cancelarBtn" class="btn btn-secondary">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./perfil.js"></script>
+</body>
+</html>

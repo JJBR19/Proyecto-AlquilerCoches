@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - Alquiler de Coches</title>
+  <link rel="stylesheet" href="menu.css">
+  <script type="module" src="./componenteMenu.js"></script>
+
+</head>
+
+<body>
+
+  <!-- INSERTAMOS EL COMPONENTE MENU -->
+  <menu-componente></menu-componente>
+
+  <main>
+    <section class="bienvenida">
+      <h1>Bienvenido a Alquiler de Coches 🚗</h1>
+      <p>
+        Somos una empresa dedicada al alquiler de vehículos con más de 10 años de experiencia.
+        Ofrecemos una amplia gama de coches para todo tipo de viajes — desde compactos hasta deportivos de lujo.
+      </p>
+      <a href="../login/Proyecto-AlquilerCoches/pagina_coches.html" class="btn-primary">Explorar coches</a>
+    </section>
+
+
+    <!-- SECCIÓN DE COCHES -->
+    <section class="coches">
+      <h2>NUESTROS COCHES MAS DESTACADOS</h2>
+      <div class="coches-container">
+        <div class="card">
+          <img src="https://scene7.toyota.eu/is/image/toyotaeurope/review-nuevo-corolla?wid=1920&hei=1080&fit=hfit,1"
+            alt="Coche 1">
+          <h3>Toyota Corolla</h3>
+          <p>Perfecto para ciudad y viajes cortos. Económico y confiable.</p>
+          <a href="../GestionCoches/GestionCoches.html" class="btn-secondary">Alquilar</a>
+        </div>
+        <div class="card">
+          <img class="coche2"
+            src="https://s3-eu-west-1.amazonaws.com/carnovo-images/review-models/a7b77783-cd34-4a04-9c82-16b5a81c8696.jpg"
+            alt="Coche 2">
+          <h3>Mercedes Clase C</h3>
+          <p>Lujo y confort para una experiencia premium en carretera.</p>
+          <a href="../GestionCoches/GestionCoches.html" class="btn-secondary">Alquilar</a>
+        </div>
+        <div class="card">
+          <img src="https://images.coches.com/_vn_/bmw/Serie-3/1f1b2ba8731617c04decf13215d20e83.jpg?w=1920&ar=16:9"
+            alt="Coche 3">
+          <h3>BMW Serie 3</h3>
+          <p>Deportivo y cómodo para viajes largos con estilo y seguridad.</p>
+          <a href="../GestionCoches/GestionCoches.html" class="btn-secondary">Alquilar</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section class="servicios">
+      <h2>Servicios que ofrecemos</h2>
+      <div class="servicios-container">
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="">
+          <h3>Entrega a domicilio</h3>
+          <p>Recibe tu coche sin moverte de casa.</p>
+        </div>
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="">
+          <h3>Seguro incluido</h3>
+          <p>Conducción segura en todos nuestros coches.</p>
+        </div>
+        <div class="servicio">
+          <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="">
+          <h3>Asistencia 24h</h3>
+          <p>Estamos disponibles para ayudarte en cualquier momento.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Alquiler de Coches. Todos los derechos reservados.</p>
+  </footer>
+</body>
+
+</html>

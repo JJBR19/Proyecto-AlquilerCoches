@@ -1,0 +1,164 @@
+/* Estilo general */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #e6f0ff; /* azul muy claro */
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #003366; 
+}
+
+/* Contenedores de selects */
+.selects-marcas, .selects-precios {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.selects-marcas p, .selects-precios p {
+  margin: 0;
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Estilo de los selects */
+#select-marca, #select-precio {
+  padding: 12px 25px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(90deg, #003366, #3399ff);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  outline: none;
+  margin-left: 10px;
+}
+
+/* Hover y focus de los selects */
+#select-marca:hover, #select-precio:hover,
+#select-marca:focus, #select-precio:focus {
+  background: linear-gradient(90deg, #ffcc00, #ff9900);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Opciones del select */
+#select-marca option, #select-precio option {
+  color: #003366;
+  background-color: #ffffff;
+}
+
+/* Título dinámico del precio */
+#titulo-precio {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Secciones de marca */
+.marca {
+  margin-bottom: 60px;
+}
+
+.marca h2 {
+  margin-bottom: 25px;
+  color: #003366;
+  font-size: 1.8rem;
+}
+
+/* Sección novedades: mantener mismo estilo que las marcas */
+.novedades {
+  margin-bottom: 60px;
+}
+
+.novedades h1 {
+  margin-bottom: 25px;
+  color: #003366;
+  font-size: 1.8rem;
+}
+
+/* Ajustes específicos para que la tarjeta de Novedades no ocupe todo el ancho */
+.novedades .coches {
+  display: flex;              /* usar flex para control total del alineado */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start; /* alinear a la izquierda */
+  gap: 25px;
+  max-width: 1100px; /* ancho máximo del bloque de novedades */
+  margin: 0;          /* mantener en el flujo y alineado a la izquierda */
+}
+
+.novedades .coche {
+  max-width: 340px;  /* evitar que la tarjeta se expanda demasiado */
+  margin: 0;         /* ya no centrar: alineada a la izquierda */
+}
+
+/* Contenedor de coches */
+.coches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Cada coche */
+.coche {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+.coche:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+/* Imagen del coche */
+.coche img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.coche:hover img {
+  transform: scale(1.05);
+}
+
+/* Nombre y descripción */
+.coche p {
+  margin: 10px 0 15px;
+  color: #003366;
+  font-size: 0.9rem;
+}
+
+/* Botón alquilar */
+.coche button {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(90deg, #003366, #3399ff); 
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.coche button:hover {
+  background: linear-gradient(90deg, #ffcc00, #ff9900); 
+}

@@ -1,0 +1,19 @@
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#07203b,#051726);color:#e6f7ff;margin:0;padding:0}
+.page-container{width:92%;max-width:1100px;margin:48px auto;display:grid;grid-template-columns:1fr 320px;gap:24px}
+.page-header{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));padding:26px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.4)}
+.page-header h1{margin:0 0 6px;font-size:28px}
+.page-header .lead{opacity:0.9;margin:0}
+.reservas-list{display:flex;flex-direction:column;gap:12px}
+.reserva-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.reserva-meta{display:flex;gap:12px;align-items:center}
+.reserva-meta .img{width:80px;height:56px;border-radius:6px;background:#0b2f43;flex-shrink:0;object-fit:cover}
+.reserva-info{min-width:0}
+.reserva-info h4{margin:0 0 4px;font-size:16px}
+.reserva-info p{margin:0;color:rgba(230,247,255,0.8);font-size:13px}
+.reserva-actions{display:flex;gap:10px;align-items:center}
+.btn{padding:8px 12px;border-radius:8px;border:0;cursor:pointer;font-weight:700}
+.btn-danger{background:#ff6b6b;color:white}
+.btn-small{padding:6px 8px;font-size:13px}
+.empty{opacity:0.8;color:rgba(230,247,255,0.75)}
+.side-info{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+@media (max-width:950px){.page-container{grid-template-columns:1fr;gap:16px;margin:20px}}

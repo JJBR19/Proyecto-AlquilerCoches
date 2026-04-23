@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Panel Admin</title>
+  <link rel="stylesheet" href="./perfil.css">
+</head>
+<body>
+  <script type="module" src="../../menu/componenteMenu.js"></script>
+  <menu-componente></menu-componente>
+
+  <main class="perfil-page">
+    <section class="perfil-contenedor">
+      <div class="perfil-card">
+        <div class="perfil-body" style="width:100%;">
+          <h2 style="color:var(--accent);">Panel de Administración</h2>
+          <p id="accessMsg">Comprobando permisos...</p>
+
+          <div id="adminPanels" style="display:none; margin-top:16px;">
+            <h3>Usuarios</h3>
+            <div id="usuariosPanel">
+              <button id="btnNuevoUsuario" class="btn btn-primary">Nuevo Usuario</button>
+              <table id="tablaUsuarios" style="width:100%; margin-top:8px; border-collapse:collapse;">
+                <thead><tr><th>Nombre</th><th>Usuario</th><th>Email</th><th>Rol</th><th>Acciones</th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+
+            <hr />
+
+            <h3>Coches</h3>
+            <div id="cochesPanel">
+              <button id="btnNuevoCoche" class="btn btn-primary">Nuevo Coche</button>
+              <button id="btnAbrirCatalogo" class="btn btn-secondary">Abrir Catálogo</button>
+              <table id="tablaCoches" style="width:100%; margin-top:8px; border-collapse:collapse;">
+                <thead><tr><th>Marca/Modelo</th><th>Precio</th><th>Acciones</th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Formulario modal para crear/editar coche -->
+          <div id="cocheFormModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); align-items:center; justify-content:center; z-index:3000;">
+            <div style="background:#0f2a44; padding:16px; border-radius:12px; width:90%; max-width:600px; color:#fff;">
+              <h3 id="cocheFormTitle">Nuevo Coche</h3>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+                <input id="carMarca" placeholder="Marca" />
+                <input id="carModelo" placeholder="Modelo" />
+                <input id="carTipo" placeholder="Tipo" />
+                <input id="carAnio" placeholder="Año" type="number" />
+                <input id="carPrecio" placeholder="Precio" type="number" />
+                <input id="carImagenUrl" placeholder="URL de la imagen (opcional)" />
+              </div>
+              <div style="margin-top:8px; display:flex; gap:8px; align-items:center;">
+                <input id="carImagenFile" type="file" accept="image/*" />
+                <img id="carPreview" src="" alt="preview" style="width:96px;height:64px;object-fit:cover;border-radius:6px;display:none;border:2px solid #fff;" />
+              </div>
+              <div style="margin-top:12px; display:flex; gap:8px; justify-content:flex-end;">
+                <button id="cancelCarBtn" class="btn btn-secondary">Cancelar</button>
+                <button id="addAndOpenBtn" class="btn btn-primary">Añadir y abrir catálogo</button>
+                <button id="saveCarBtn" class="btn btn-success">Guardar coche</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <template id="usuario-row">
+    <tr>
+      <td class="u-nombre"></td>
+      <td class="u-usuario"></td>
+      <td class="u-email"></td>
+      <td class="u-role"></td>
+      <td>
+        <button class="editar btn btn-secondary">Editar</button>
+        <button class="borrar btn btn-logout">Borrar</button>
+      </td>
+    </tr>
+  </template>
+
+  <template id="coche-row">
+    <tr>
+      <td class="c-nombre"></td>
+      <td class="c-precio"></td>
+      <td>
+        <button class="editarC btn btn-secondary">Editar</button>
+        <button class="borrarC btn btn-logout">Borrar</button>
+      </td>
+    </tr>
+  </template>
+
+  <script src="./admin.js"></script>
+</body>
+</html>

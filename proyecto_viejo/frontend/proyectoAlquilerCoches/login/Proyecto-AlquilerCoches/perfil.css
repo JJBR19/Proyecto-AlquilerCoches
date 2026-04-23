@@ -1,0 +1,58 @@
+/* Perfil - estilos */
+:root{
+  --bg: #0a1a2f;
+  --card: #0f2a44;
+  --accent: #ffd700;
+  --muted: #cbd5e1;
+}
+
+.perfil-page{ padding: 2rem; max-width:1100px; margin: 0 auto; }
+
+.perfil-card{
+  display:flex; gap:2rem; align-items:flex-start; background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); padding:1.5rem; border-radius:12px; box-shadow:0 8px 30px rgba(2,6,23,0.6);
+}
+
+.perfil-aside{ width:220px; display:flex; flex-direction:column; gap:1rem; align-items:center; }
+.avatar{ width:140px; height:140px; border-radius:50%; background:linear-gradient(135deg,#ffd700,#e6c200); color:#001f3f; display:flex; align-items:center; justify-content:center; font-size:48px; font-weight:800; box-shadow:0 6px 18px rgba(0,0,0,0.4); }
+
+.btn{ border:0; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:700; }
+.btn-primary{ background:var(--accent); color:#001f3f; }
+.btn-logout{ background:#d9534f; color:#fff; }
+.btn-success{ background:#28a745; color:white; }
+.btn-secondary{ background:#6c757d; color:white; }
+
+.perfil-body{ flex:1; }
+#perfilNombre{ margin:0 0 12px 0; color:var(--accent); }
+.datos-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+.dato{ background: rgba(255,255,255,0.03); padding:12px; border-radius:8px; }
+.dato strong{ display:block; color:var(--muted); font-size:0.85rem; }
+.dato p{ margin:6px 0 0 0; color:#fff; font-weight:600; }
+
+input.input-edit{ width:100%; padding:8px 10px; border-radius:6px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.02); color:#fff; }
+
+.actions{ margin-top:16px; display:flex; gap:8px; }
+
+@media (max-width:900px){
+  .perfil-card{ flex-direction:column; }
+  .perfil-aside{ width:100%; flex-direction:row; justify-content:space-between; padding:0 8px; }
+  .datos-grid{ grid-template-columns: 1fr; }
+  .avatar{ width:96px; height:96px; font-size:28px; }
+}
+
+/* Admin panels inside perfil view */
+.perfil-body > #adminPanels { margin-top: 18px; }
+.perfil-body #adminPanels h3 { color: var(--accent); margin: 12px 0; font-size: 1.15rem; }
+
+/* Table container: responsive and spaced below profile info */
+.perfil-body .table-wrap { margin-top: 8px; background: rgba(255,255,255,0.02); padding: 12px; border-radius: 10px; }
+.perfil-body table { width: 100%; border-collapse: collapse; color: black; }
+.perfil-body th, .perfil-body td { text-align: left; padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.perfil-body thead th { color: var(--muted); font-weight:700; background: transparent; }
+.perfil-body tbody tr:hover { background: rgba(255,255,255,0.02); }
+
+/* Actions buttons inside table rows */
+.perfil-body .btn { font-size: 0.9rem; padding: 6px 10px; }
+
+/* Ensure that content added below (novedades/otros) appears clearly separated */
+.perfil-body .below-section { margin-top: 24px; }
+
