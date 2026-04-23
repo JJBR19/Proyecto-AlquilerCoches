@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mis reservas</title>
+  <link rel="stylesheet" href="reservas.css">
+  <script src="reservas.js" defer></script>
+</head>
+<body>
+  <script type="module" src="../../menu/componenteMenu.js"></script>
+  <menu-componente></menu-componente>
+
+  <main class="page-container">
+    <header class="page-header">
+      <h1>Mis reservas</h1>
+      <p class="lead">Aquí encontrarás las reservas que hayas confirmado. Puedes cancelar cualquiera.</p>
+      <section id="reservas-list" class="reservas-list">
+      <p class="empty">No tienes reservas todavía.</p>
+      </section>
+    </header>
+
+    
+
+    <aside class="side-info">
+      <h3>Información</h3>
+      <p>Las reservas se guardan localmente en tu navegador (localStorage).</p>
+    </aside>
+  </main>
+</body>
+</html>

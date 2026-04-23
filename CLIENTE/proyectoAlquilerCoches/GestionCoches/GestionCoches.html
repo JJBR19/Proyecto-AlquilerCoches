@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="GestionCoches.css">
+        <script src="./GestiónCoches.js"></script>
+        <script type="module" src="../menu/componenteMenu.js"></script>
+    </head>
+
+<body>
+    <menu-componente></menu-componente>
+
+    <div class="page-container">
+        <header style="margin-bottom:14px;">
+            <h1>Reservar vehículos</h1>
+            <p style="margin:6px 0 0; opacity:0.9; color:rgba(255,255,255,0.88)">Rellena oficina, fecha y hora. Las horas válidas van de 08:00 a 21:00.</p>
+        </header>
+
+    <div hidden>
+        <strong>Error:</strong> Lo sentimos, no estamos seguros de la oficina que buscas. Por favor, selecciona una oficina o ciudad en el desplegable o inténtalo de nuevo.
+    </div>
+
+<dialog id="vehicleDialog">
+    <div class="modal-header">
+        <h2>Filtrar vehículos</h2>
+    </div>
+
+    <div class="modal-body">
+
+        <div class="category-title">Marca</div>
+        <div class="category-grid" id="marca">
+            <label><input type="checkbox" name="marca" value="Toyota"> Toyota</label>
+            <label><input type="checkbox" name="marca" value="Mercedes"> Mercedes</label>
+            <label><input type="checkbox" name="marca" value="Audi"> Audi</label>
+            <label><input type="checkbox" name="marca" value="BMW"> BMW</label>
+            <label><input type="checkbox" name="marca" value="Alfa Romeo"> Alfa Romeo</label>
+        </div>
+
+        <div class="category-title">Modelo</div>
+        <div class="category-grid" id="modelo">
+            <label><input type="checkbox" name="modelo" value="Corolla"> Corolla (Toyota)</label>
+            <label><input type="checkbox" name="modelo" value="Yaris"> Yaris (Toyota)</label>
+            <label><input type="checkbox" name="modelo" value="Camry"> Camry (Toyota)</label>
+            <label><input type="checkbox" name="modelo" value="RAV4"> RAV4 (Toyota)</label>
+            <label><input type="checkbox" name="modelo" value="Highlander"> Highlander (Toyota)</label>
+            
+            <label><input type="checkbox" name="modelo" value="Clase C"> Clase C (Mercedes)</label>
+            <label><input type="checkbox" name="modelo" value="Clase A"> Clase A (Mercedes)</label>
+            <label><input type="checkbox" name="modelo" value="GLA"> GLA (Mercedes)</label>
+            <label><input type="checkbox" name="modelo" value="GLE"> GLE (Mercedes)</label>
+            <label><input type="checkbox" name="modelo" value="Clase E"> Clase E (Mercedes)</label>
+
+            <label><input type="checkbox" name="modelo" value="A3"> A3 (Audi)</label>
+            <label><input type="checkbox" name="modelo" value="A4"> A4 (Audi)</label>
+            <label><input type="checkbox" name="modelo" value="Q3"> Q3 (Audi)</label>
+            <label><input type="checkbox" name="modelo" value="Q5"> Q5 (Audi)</label>
+            <label><input type="checkbox" name="modelo" value="A6"> A6 (Audi)</label>
+
+            <label><input type="checkbox" name="modelo" value="Serie 3"> Serie 3 (BMW)</label>
+            <label><input type="checkbox" name="modelo" value="Serie 1"> Serie 1 (BMW)</label>
+            <label><input type="checkbox" name="modelo" value="X1"> X1 (BMW)</label>
+            <label><input type="checkbox" name="modelo" value="X3"> X3 (BMW)</label>
+            <label><input type="checkbox" name="modelo" value="Serie 5"> Serie 5 (BMW)</label>
+
+            <label><input type="checkbox" name="modelo" value="Giulia"> Giulia (Alfa)</label>
+            <label><input type="checkbox" name="modelo" value="Stelvio"> Stelvio (Alfa)</label>
+            <label><input type="checkbox" name="modelo" value="Tonale"> Tonale (Alfa)</label>
+            <label><input type="checkbox" name="modelo" value="4C"> 4C (Alfa)</label>
+            <label><input type="checkbox" name="modelo" value="MiTo"> MiTo (Alfa)</label>
+        </div>
+
+        <div class="category-title">Tipo</div>
+        <div class="category-grid" id="tipo">
+            <label><input type="checkbox" name="tipo" value="Compacto"> Compacto / Hatchback</label>
+            <label><input type="checkbox" name="tipo" value="Sedan"> Sedán</label>
+            <label><input type="checkbox" name="tipo" value="SUV"> SUV</label>
+            <label><input type="checkbox" name="tipo" value="Deportivo"> Deportivo</label>
+            <label><input type="checkbox" name="tipo" value="Lujo"> Lujo / Ejecutivo</label>
+        </div>
+
+        <div class="category-title">Precio por día</div>
+        <div class="category-grid" id="precio" style="display: block;">
+            
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                <label style="background:none; padding:0;">Mín: <span id="precioMinValue">0</span>€</label>
+                <label style="background:none; padding:0;">Máx: <span id="precioMaxValue">600</span>€</label>
+            </div>
+
+            <input type="range" id="precioMin" name="precioMin" min="0" max="600" value="0" step="10" 
+                oninput="document.getElementById('precioMinValue').textContent = this.value">
+
+            <input type="range" id="precioMax" name="precioMax" min="0" max="600" value="600" step="10" 
+                oninput="document.getElementById('precioMaxValue').textContent = this.value">
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button onclick="cerrarDialogo('cancel')">Cancelar</button>
+        <button class="action-button" onclick="aplicarFiltros()">Aplicar filtro</button>
+    </div>
+</dialog>
+
+
+
+
+
+
+<form action="#" method="post">
+        
+    <p class="parrafo1">
+    <span><strong>Oficina de recogida y devolución (Código postal, ciudad o aeropuerto)*</strong></span>
+    <input type="text" id="oficina" name="oficina" placeholder="Introduce una ciudad">
+    Para devolver en una intalacion diferente:
+    <input type="checkbox" id="devolver_diferente" name="devolver_diferente">
+    </p>
+
+        <div class="divFechas">
+            <div class="fecha-block">
+                <label for="recogida_fecha">Recogida*</label>
+                <input type="date" id="recogida_fecha" name="recogida_fecha" required>
+                <label for="recogida_hora" class="label-small">Hora*</label>
+                <input type="time" id="recogida_hora" name="recogida_hora" required step="300">
+                <small id="recogidaHelp" class="help-text">Selecciona fecha y hora de recogida</small>
+            </div>
+
+            <div class="fecha-block">
+                <label for="devolucion_fecha">Devolución*</label>
+                <input type="date" id="devolucion_fecha" name="devolucion_fecha" required>
+                <label for="devolucion_hora" class="label-small">Hora*</label>
+                <input type="time" id="devolucion_hora" name="devolucion_hora" required step="300">
+                <small id="devolucionHelp" class="help-text">La devolución debe ser igual o posterior a la recogida</small>
+            </div>
+        </div>
+
+        <div class="divOpciones">
+            <div>
+                <label for="tipo_vehiculo">Tipo de vehículo</label>
+                <select id="tipo_vehiculo" name="tipo_vehiculo">
+                    <option value="default">Selecciona una opción...</option>
+                    <option value="todos">Todos los vehículos</option>
+                </select>
+            </div>
+            </div>
+
+
+        
+        
+
+        <div class="submit-row">
+            <div class="submit-note">Si seleccionas "Todos los vehículos" podrás usar filtros avanzados</div>
+            <button type="submit" class="primary-action">Buscar vehículos</button>
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>

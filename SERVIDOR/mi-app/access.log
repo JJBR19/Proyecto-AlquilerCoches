@@ -1,0 +1,5 @@
+::1 - - [20/Apr/2026:12:16:46 +0000] "GET / HTTP/1.1" 404 18 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+::1 - - [20/Apr/2026:12:16:46 +0000] "GET /favicon.ico HTTP/1.1" 404 18 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+::1 - - [20/Apr/2026:12:16:52 +0000] "GET / HTTP/1.1" 404 18 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+::1 - - [20/Apr/2026:12:17:31 +0000] "GET / HTTP/1.1" 404 18 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+::1 - - [20/Apr/2026:12:17:32 +0000] "GET / HTTP/1.1" 404 18 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"

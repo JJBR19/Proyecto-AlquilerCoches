@@ -1,0 +1,5 @@
+{"level":"info","message":"::1 - - \"GET /\" PETICION ERRONEA","service":"mi-app","timestamp":"2026-04-20T12:16:46.925Z"}
+{"level":"info","message":"::1 - - \"GET /favicon.ico\" PETICION ERRONEA","service":"mi-app","timestamp":"2026-04-20T12:16:46.978Z"}
+{"level":"info","message":"::1 - - \"GET /\" PETICION ERRONEA","service":"mi-app","timestamp":"2026-04-20T12:16:52.880Z"}
+{"level":"info","message":"::1 - - \"GET /\" PETICION ERRONEA","service":"mi-app","timestamp":"2026-04-20T12:17:31.867Z"}
+{"level":"info","message":"::1 - - \"GET /\" PETICION ERRONEA","service":"mi-app","timestamp":"2026-04-20T12:17:32.193Z"}
